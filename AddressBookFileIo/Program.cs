@@ -1,4 +1,5 @@
-﻿using AddressBookFileIo.FileIoOperation;
+﻿using AddressBookFileIo.CSVFileIOOperation;
+using AddressBookFileIo.FileIoOperation;
 
 namespace AddressBookFileIo
 {
@@ -7,6 +8,7 @@ namespace AddressBookFileIo
         static void Main(string[] args)
         {
             string path = @"D:\Brizlab\All.netprog\NewBatch\AddressbookFileIO228\AddressBookFileIo\AddressBookFileIo\MyFiles\Contacts.txt";
+            string cSVPath = @"D:\Brizlab\All.netprog\NewBatch\AddressbookFileIO228\AddressBookFileIo\AddressBookFileIo\MyFiles\CSVContacts.csv";
 
             PersonInput input = new PersonInput();
             Console.WriteLine("\nEnter your First Name : ");
@@ -26,9 +28,14 @@ namespace AddressBookFileIo
             Console.WriteLine("Enter your Email Address: ");
             input.email = Console.ReadLine();
 
-            FileIO.WriteRecordsInFile(path, input);
-            Console.WriteLine("\n\nRecords present in file are : ");
-            FileIO.ReadRecordsFromFile(path);
+            //FileIO.WriteRecordsInFile(path, input);
+            //Console.WriteLine("\n\nRecords present in file are : ");
+            //FileIO.ReadRecordsFromFile(path);
+            //Console.ReadLine();
+
+            CSVOperations.WriteRecordsInCSVFile(cSVPath, input);
+            Console.WriteLine("\n\nRecords present in CSV file are : \n");
+            CSVOperations.ReadRecordsInCSVFile(cSVPath);
             Console.ReadLine();
         }
     }

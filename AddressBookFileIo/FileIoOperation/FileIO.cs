@@ -21,6 +21,7 @@ namespace AddressBookFileIo.FileIoOperation
                 sw.WriteLine("State : " + person.state);
                 sw.WriteLine("Email : " + person.email);
                 sw.WriteLine("Zip code : " + person.zip);
+                sw.WriteLine("Mobile Number : " + person.phoneNumber);
                 sw.WriteLine();
                 sw.Close();
                 Console.WriteLine("\nData added successfully in file");

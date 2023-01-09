@@ -1,9 +1,12 @@
 ﻿
-First Name : amit
-Last Name : kumar
-Address : nayak
-City : js
-State : sj
-Email : jgk
-Zip code : 89
+
+
+First Name : Amit
+Last Name : Kumar
+Address : Jiral
+City : DKL
+State : Odisha
+Email : amit@gmail.com
+Zip code : 768957
+Mobile Number : 9090909090
 
