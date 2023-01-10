@@ -11,21 +11,9 @@ namespace AddressBookFileIo.CSVFileIOOperation
 {
     internal class CSVOperations
     { 
-        public static bool IsFileExists(string path)
-        {
-            if (File.Exists(path))
-            {
-                return true;
-            }
-            else
-            {
-                Console.WriteLine("File Not Found");
-                return false;
-            }
-        }
         public static void WriteRecordsInCSVFile(string path, PersonInput input)
         {
-            if (IsFileExists(path))
+            if (Program.IsFileExists(path))
             {
                 List<PersonInput> list = new List<PersonInput>();
                 list.Add(input);
@@ -37,7 +25,7 @@ namespace AddressBookFileIo.CSVFileIOOperation
         }
         public static void ReadRecordsInCSVFile(string path)
         {
-            if (IsFileExists(path))
+            if (Program.IsFileExists(path))
             {
                 StreamReader stream = new StreamReader(path);
                 CsvReader csv = new CsvReader(stream, CultureInfo.InvariantCulture);

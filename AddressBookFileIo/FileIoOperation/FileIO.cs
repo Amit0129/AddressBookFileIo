@@ -14,14 +14,14 @@ namespace AddressBookFileIo.FileIoOperation
             if (File.Exists(path))
             {
                 StreamWriter sw = File.AppendText(path);
-                sw.WriteLine("\nFirst Name : " + person.fName);
-                sw.WriteLine("Last Name : " + person.lName);
-                sw.WriteLine("Address : " + person.address);
-                sw.WriteLine("City : " + person.city);
-                sw.WriteLine("State : " + person.state);
-                sw.WriteLine("Email : " + person.email);
-                sw.WriteLine("Zip code : " + person.zip);
-                sw.WriteLine("Mobile Number : " + person.phoneNumber);
+                sw.WriteLine("\nFirst Name : " + person.First_Name);
+                sw.WriteLine("Last Name : " + person.Last_Name);
+                sw.WriteLine("Address : " + person.Address);
+                sw.WriteLine("City : " + person.City);
+                sw.WriteLine("State : " + person.State);
+                sw.WriteLine("Email : " + person.Email);
+                sw.WriteLine("Zip code : " + person.Zip);
+                sw.WriteLine("Mobile Number : " + person.PhoneNumber);
                 sw.WriteLine();
                 sw.Close();
                 Console.WriteLine("\nData added successfully in file");
